@@ -1,0 +1,24 @@
+{% include "header.html" %}
+<section>
+    <div class="container">
+        <nav class="navbar">
+            <a href="{{ url_for('main.home') }}" class="logo">
+                <img src="static/images/calvary_logo.png" alt="Calvary Mission Tanzania Logo" class="logo-img">
+                <span class="logo-text">Calvary</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('main.about') }}">About</a></li>
+                <li><a href="{{ url_for('main.programs') }}">Programs</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+</section>
+<section>
+    {% block content %}  {% endblock  %}
+</section>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+{% include "footer.html" %}
